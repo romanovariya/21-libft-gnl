@@ -1,2 +1,2 @@
 # My workplace
-libft project at 21 School
+libft project [libft project](https://github.com/romanovariya/21School/tree/master/libft "libft")
