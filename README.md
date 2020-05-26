@@ -1,2 +1,2 @@
-# libft
-libft priject at 21 School
+# My workplace
+libft project at 21 School
