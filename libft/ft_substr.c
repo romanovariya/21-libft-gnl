@@ -6,7 +6,7 @@
 /*   By: mbabette <mbabette@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/20 01:47:55 by mbabette          #+#    #+#             */
-/*   Updated: 2020/05/20 21:38:27 by mbabette         ###   ########.fr       */
+/*   Updated: 2020/05/27 14:21:16 by mbabette         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	length = ft_strlen(s);
 	if (start > length)
-		return (NULL);
+		return (ft_strdup(""));
 	if (start + len > length)
 		len = (length - start);
-	sublen = length - start + 1;
+	sublen = len + 1;
 	substr = malloc(sizeof(char) * sublen);
 	if (!substr)
 		return (NULL);

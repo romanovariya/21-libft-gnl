@@ -6,15 +6,15 @@
 /*   By: mbabette <mbabette@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/17 22:35:39 by mbabette          #+#    #+#             */
-/*   Updated: 2020/05/18 02:24:33 by mbabette         ###   ########.fr       */
+/*   Updated: 2020/05/25 23:25:31 by mbabette         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	res;
-	int	sign;
+	int				i;
+	unsigned long	res;
+	int				sign;
 
 	i = 0;
 	res = 0;
@@ -34,5 +34,7 @@ int	ft_atoi(const char *str)
 		res = res + (str[i] - '0');
 		i++;
 	}
+	if (i > 19 || res >= 9223372036854775808UL)
+		return (sign == 1 ? -1 : 0);
 	return (sign * res);
 }

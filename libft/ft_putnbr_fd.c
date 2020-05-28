@@ -6,7 +6,7 @@
 /*   By: mbabette <mbabette@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/19 12:21:53 by mbabette          #+#    #+#             */
-/*   Updated: 2020/05/20 00:03:58 by mbabette         ###   ########.fr       */
+/*   Updated: 2020/05/27 15:49:00 by mbabette         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,22 +15,19 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	if (n == -2147483648)
+	long	i;
+
+	i = n;
+	if (i < 0)
 	{
 		ft_putchar_fd('-', fd);
-		ft_putchar_fd('2', fd);
-		n = 147483648;
+		i = -i;
 	}
-	if (n < 0)
+	if (i >= 10)
 	{
-		ft_putchar_fd('-', fd);
-		n = -n;
+		ft_putnbr_fd(i / 10, fd);
+		ft_putchar_fd(i % 10 + '0', fd);
 	}
-	if (n >= 10)
-	{
-		ft_putnbr_fd(n / 10, fd);
-		ft_putchar_fd(n % 10 + '0', fd);
-	}
-	if (n < 10)
-		ft_putchar_fd(n % 10 + '0', fd);
+	if (i < 10)
+		ft_putchar_fd(i % 10 + '0', fd);
 }

@@ -1,26 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbabette <mbabette@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/05/18 15:00:49 by mbabette          #+#    #+#             */
-/*   Updated: 2020/05/25 22:19:13 by mbabette         ###   ########.fr       */
+/*   Created: 2020/05/27 15:53:34 by mbabette          #+#    #+#             */
+/*   Updated: 2020/05/27 16:14:35 by mbabette         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t num, size_t size)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	char			*temps;
-	unsigned int	sum;
-
-	sum = num * size;
-	temps = (char *)malloc(sum);
-	if (!temps)
-		return (NULL);
-	ft_bzero(temps, sum);
-	return (temps);
+	if (del)
+		del(lst->content);
+	free(lst);
+	lst = NULL;
 }

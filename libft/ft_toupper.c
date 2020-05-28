@@ -6,18 +6,13 @@
 /*   By: mbabette <mbabette@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/04 21:53:03 by mbabette          #+#    #+#             */
-/*   Updated: 2020/05/04 22:05:01 by mbabette         ###   ########.fr       */
+/*   Updated: 2020/05/25 21:55:42 by mbabette         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_toupper(int c)
 {
-	int i;
-
-	if (c >= 97 && c <= 122)
-	{
-		i = c - 32;
-		return (i);
-	}
+	if (c >= 'a' && c <= 'z')
+		c = c - 32;
 	return (c);
 }

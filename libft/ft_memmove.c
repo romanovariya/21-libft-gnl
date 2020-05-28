@@ -6,7 +6,7 @@
 /*   By: mbabette <mbabette@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/11 01:05:00 by mbabette          #+#    #+#             */
-/*   Updated: 2020/05/11 23:56:32 by mbabette         ###   ########.fr       */
+/*   Updated: 2020/05/25 21:09:00 by mbabette         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 
 	dest = dst;
 	source = src;
+	if (!dst && !src)
+		return (NULL);
 	if (dest < source)
 		while (n)
 		{

@@ -6,18 +6,13 @@
 /*   By: mbabette <mbabette@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/04 22:32:08 by mbabette          #+#    #+#             */
-/*   Updated: 2020/05/04 22:36:50 by mbabette         ###   ########.fr       */
+/*   Updated: 2020/05/25 21:39:38 by mbabette         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_tolower(int c)
 {
-	int i;
-
-	if (c >= 65 && c <= 90)
-	{
-		i = c + 32;
-		return (i);
-	}
+	if (c >= 'A' && c <= 'Z')
+		c = c + 32;
 	return (c);
 }

@@ -6,13 +6,12 @@
 /*   By: mbabette <mbabette@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/21 14:53:48 by mbabette          #+#    #+#             */
-/*   Updated: 2020/05/24 01:19:34 by mbabette         ###   ########.fr       */
+/*   Updated: 2020/05/27 16:15:14 by mbabette         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
 
@@ -61,5 +60,6 @@ void				ft_lstadd_front(t_list **lst, t_list *new);
 int					ft_lstsize(t_list *list);
 t_list				*ft_lstlast(t_list *lst);
 void				ft_lstadd_back(t_list **lst, t_list *new);
+void				ft_lstdelone(t_list *lst, void (*del)(void *));
 
 #endif
