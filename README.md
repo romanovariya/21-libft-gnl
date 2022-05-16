@@ -1,2 +1,4 @@
-# My workplace
-[libft project](https://github.com/romanovariya/21School/tree/master/libft "libft")
+#School 21 projects
+There are two projects written in C language: Libft and Get next line.
+
+In Libft I had to create C library. 
